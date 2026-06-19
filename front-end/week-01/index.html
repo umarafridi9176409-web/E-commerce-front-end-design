@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ShopVerse – Premium eCommerce destination for fashion, electronics, and lifestyle products." />
+  <title>ShopVerse | Week 01 – Header &amp; Footer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="site-header">
+
+    <!-- Top announcement bar -->
+    <div class="announcement-bar">
+      <div class="container">
+        <span class="announcement-text">
+          🔥 Summer Sale – Up to <strong>70% OFF</strong> on selected items!
+          <a href="#" class="announcement-link">Shop Now →</a>
+        </span>
+        <div class="announcement-right">
+          <a href="#" id="btn-language">🌐 EN</a>
+          <span class="divider">|</span>
+          <a href="#" id="btn-currency">$ USD</a>
+          <span class="divider">|</span>
+          <a href="#" id="btn-track">Track Order</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main nav -->
+    <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+      <div class="container nav-inner">
+
+        <!-- Logo -->
+        <a href="#" class="logo" id="logo" aria-label="ShopVerse Home">
+          <span class="logo-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+              <rect width="32" height="32" rx="8" fill="url(#logoGrad)"/>
+              <path d="M8 10h16M8 10l2 12h12l2-12M8 10l-2-3h18l-2 3" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
+                  <stop offset="0%" stop-color="#6C63FF"/>
+                  <stop offset="100%" stop-color="#FF6584"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </span>
+          <span class="logo-text">Shop<span class="logo-accent">Verse</span></span>
+        </a>
+
+        <!-- Search Bar -->
+        <div class="search-wrapper" role="search">
+          <div class="search-bar" id="search-bar">
+            <select class="search-category" id="search-category" aria-label="Search category">
+              <option>All Categories</option>
+              <option>Electronics</option>
+              <option>Fashion</option>
+              <option>Home &amp; Garden</option>
+              <option>Sports</option>
+              <option>Beauty</option>
+            </select>
+            <div class="search-divider"></div>
+            <input
+              type="search"
+              class="search-input"
+              id="search-input"
+              placeholder="Search products, brands, categories..."
+              aria-label="Search products"
+            />
+            <button class="search-btn" id="search-btn" aria-label="Search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Nav Actions -->
+        <div class="nav-actions">
+          <a href="#" class="nav-action-btn" id="btn-wishlist" aria-label="Wishlist">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+            </svg>
+            <span class="action-label">Wishlist</span>
+            <span class="badge" id="wishlist-badge">3</span>
+          </a>
+
+          <a href="#" class="nav-action-btn" id="btn-cart" aria-label="Shopping Cart">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            <span class="action-label">Cart</span>
+            <span class="badge cart-badge" id="cart-badge">5</span>
+          </a>
+
+          <div class="user-menu" id="user-menu">
+            <button class="nav-action-btn user-btn" id="btn-account" aria-label="Account menu" aria-expanded="false">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+              </svg>
+              <span class="action-label">Account</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="user-dropdown" id="user-dropdown" role="menu" aria-label="Account options">
+              <div class="dropdown-header">
+                <div class="avatar" aria-hidden="true">JD</div>
+                <div>
+                  <p class="dropdown-name">John Doe</p>
+                  <p class="dropdown-email">john@example.com</p>
+                </div>
+              </div>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item" id="menu-profile" role="menuitem">👤 My Profile</a>
+              <a href="#" class="dropdown-item" id="menu-orders" role="menuitem">📦 My Orders</a>
+              <a href="#" class="dropdown-item" id="menu-wishlist" role="menuitem">❤️ Wishlist</a>
+              <a href="#" class="dropdown-item" id="menu-settings" role="menuitem">⚙️ Settings</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item logout" id="menu-logout" role="menuitem">🚪 Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary Nav / Mega Menu -->
+      <div class="secondary-nav">
+        <div class="container secondary-nav-inner">
+          <div class="all-categories-btn" id="all-categories-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+            </svg>
+            All Categories
+          </div>
+
+          <nav class="category-links" aria-label="Category navigation">
+            <div class="category-item has-mega" id="nav-electronics">
+              <a href="#">Electronics</a>
+              <div class="mega-menu" id="mega-electronics" role="region" aria-label="Electronics subcategories">
+                <div class="mega-col">
+                  <h3 class="mega-title">Phones &amp; Tablets</h3>
+                  <a href="#" id="mega-smartphones">Smartphones</a>
+                  <a href="#" id="mega-tablets">Tablets</a>
+                  <a href="#" id="mega-accessories">Accessories</a>
+                </div>
+                <div class="mega-col">
+                  <h3 class="mega-title">Computers</h3>
+                  <a href="#" id="mega-laptops">Laptops</a>
+                  <a href="#" id="mega-desktops">Desktops</a>
+                  <a href="#" id="mega-monitors">Monitors</a>
+                </div>
+                <div class="mega-col">
+                  <h3 class="mega-title">Audio &amp; TV</h3>
+                  <a href="#" id="mega-headphones">Headphones</a>
+                  <a href="#" id="mega-speakers">Speakers</a>
+                  <a href="#" id="mega-tvs">Smart TVs</a>
+                </div>
+                <div class="mega-promo">
+                  <div class="mega-promo-badge">HOT DEAL</div>
+                  <p class="mega-promo-text">Latest iPhone 16 Pro</p>
+                  <p class="mega-promo-price">From $999</p>
+                  <a href="#" class="mega-promo-btn" id="mega-promo-btn">Shop Now</a>
+                </div>
+              </div>
+            </div>
+            <a class="category-link-simple" href="#" id="nav-fashion">Fashion</a>
+            <a class="category-link-simple" href="#" id="nav-home">Home &amp; Living</a>
+            <a class="category-link-simple" href="#" id="nav-sports">Sports</a>
+            <a class="category-link-simple" href="#" id="nav-beauty">Beauty</a>
+            <a class="category-link-simple" href="#" id="nav-toys">Toys &amp; Kids</a>
+            <a class="category-link-simple deal-link" href="#" id="nav-deals">🔥 Flash Deals</a>
+          </nav>
+
+          <div class="nav-right-badges">
+            <span class="free-shipping-badge" id="free-shipping-badge">🚚 Free Shipping over $50</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== MAIN CONTENT (placeholder) ===================== -->
+  <main class="main-content" id="main-content">
+    <div class="placeholder-hero">
+      <div class="container">
+        <span class="week-label">Week 01 Deliverable</span>
+        <h1 class="placeholder-title">Header &amp; Footer</h1>
+        <p class="placeholder-desc">
+          This page showcases the fully implemented <strong>Header</strong> (sticky navigation, mega-menu, search bar, user account dropdown, cart &amp; wishlist badges) and <strong>Footer</strong> (multi-column links, newsletter signup, social media icons, and legal section) as specified in the design.
+        </p>
+        <div class="placeholder-features">
+          <div class="feature-card">
+            <span class="feature-icon">🧭</span>
+            <span>Sticky Navbar</span>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🔍</span>
+            <span>Category Search</span>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">📂</span>
+            <span>Mega Menu</span>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">👤</span>
+            <span>User Dropdown</span>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">🛒</span>
+            <span>Cart Badge</span>
+          </div>
+          <div class="feature-card">
+            <span class="feature-icon">📧</span>
+            <span>Newsletter</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" id="site-footer">
+
+    <!-- Footer top newsletter -->
+    <div class="footer-newsletter-strip">
+      <div class="container newsletter-strip-inner">
+        <div class="newsletter-text">
+          <h2 class="newsletter-heading">Stay in the Loop</h2>
+          <p class="newsletter-sub">Get exclusive deals, new arrivals, and insider-only discounts straight to your inbox.</p>
+        </div>
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <div class="newsletter-input-wrap">
+            <input
+              type="email"
+              class="newsletter-input"
+              id="newsletter-email"
+              placeholder="Enter your email address..."
+              aria-label="Email address for newsletter"
+              required
+            />
+            <button type="submit" class="newsletter-btn" id="newsletter-submit">
+              Subscribe
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </div>
+          <p class="newsletter-note">🔒 No spam. Unsubscribe at any time.</p>
+          <p class="newsletter-success" id="newsletter-success" style="display:none;">✅ Thank you! You're subscribed.</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer main -->
+    <div class="footer-main">
+      <div class="container footer-grid">
+
+        <!-- Brand column -->
+        <div class="footer-col footer-brand-col">
+          <a href="#" class="footer-logo" id="footer-logo" aria-label="ShopVerse Home">
+            <span class="logo-icon">
+              <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                <rect width="32" height="32" rx="8" fill="url(#footerLogoGrad)"/>
+                <path d="M8 10h16M8 10l2 12h12l2-12M8 10l-2-3h18l-2 3" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <defs>
+                  <linearGradient id="footerLogoGrad" x1="0" y1="0" x2="32" y2="32">
+                    <stop offset="0%" stop-color="#6C63FF"/>
+                    <stop offset="100%" stop-color="#FF6584"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span class="logo-text">Shop<span class="logo-accent">Verse</span></span>
+          </a>
+          <p class="footer-brand-desc">
+            Your one-stop destination for premium fashion, cutting-edge electronics, and everything in between. Shop with confidence.
+          </p>
+          <div class="footer-socials" role="list" aria-label="Social media links">
+            <a href="#" class="social-btn" id="social-facebook" aria-label="Facebook" role="listitem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="social-btn" id="social-twitter" aria-label="Twitter / X" role="listitem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+            </a>
+            <a href="#" class="social-btn" id="social-instagram" aria-label="Instagram" role="listitem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" class="social-btn" id="social-youtube" aria-label="YouTube" role="listitem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#0F0F1A"/></svg>
+            </a>
+            <a href="#" class="social-btn" id="social-pinterest" aria-label="Pinterest" role="listitem">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+            </a>
+          </div>
+          <!-- Payment methods -->
+          <div class="payment-methods">
+            <p class="payment-label">We Accept:</p>
+            <div class="payment-icons">
+              <span class="payment-icon" id="pay-visa">VISA</span>
+              <span class="payment-icon" id="pay-mc">MC</span>
+              <span class="payment-icon" id="pay-amex">AMEX</span>
+              <span class="payment-icon" id="pay-paypal">PayPal</span>
+              <span class="payment-icon" id="pay-apple">Apple Pay</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Company links -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">Company</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#" id="footer-about">About Us</a></li>
+            <li><a href="#" id="footer-careers">Careers</a></li>
+            <li><a href="#" id="footer-press">Press &amp; Media</a></li>
+            <li><a href="#" id="footer-investors">Investors</a></li>
+            <li><a href="#" id="footer-blog">Blog</a></li>
+            <li><a href="#" id="footer-affiliates">Affiliate Program</a></li>
+            <li><a href="#" id="footer-sustainability">Sustainability</a></li>
+          </ul>
+        </div>
+
+        <!-- Help links -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">Help &amp; Support</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#" id="footer-faq">FAQ</a></li>
+            <li><a href="#" id="footer-contact">Contact Us</a></li>
+            <li><a href="#" id="footer-track-order">Track My Order</a></li>
+            <li><a href="#" id="footer-returns">Returns &amp; Refunds</a></li>
+            <li><a href="#" id="footer-shipping">Shipping Info</a></li>
+            <li><a href="#" id="footer-size-guide">Size Guide</a></li>
+            <li><a href="#" id="footer-gift-cards">Gift Cards</a></li>
+          </ul>
+        </div>
+
+        <!-- Products links -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">Products</h3>
+          <ul class="footer-links" role="list">
+            <li><a href="#" id="footer-new-arrivals">New Arrivals</a></li>
+            <li><a href="#" id="footer-best-sellers">Best Sellers</a></li>
+            <li><a href="#" id="footer-flash-deals">Flash Deals</a></li>
+            <li><a href="#" id="footer-collections">Collections</a></li>
+            <li><a href="#" id="footer-electronics-f">Electronics</a></li>
+            <li><a href="#" id="footer-fashion-f">Fashion</a></li>
+            <li><a href="#" id="footer-home-living">Home &amp; Living</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p class="copyright">© 2026 ShopVerse. All rights reserved. Designed with ❤️ for great shopping experiences.</p>
+          <div class="footer-legal-links">
+            <a href="#" id="footer-privacy">Privacy Policy</a>
+            <span class="dot-sep">·</span>
+            <a href="#" id="footer-terms">Terms of Service</a>
+            <span class="dot-sep">·</span>
+            <a href="#" id="footer-cookies">Cookie Settings</a>
+            <span class="dot-sep">·</span>
+            <a href="#" id="footer-accessibility">Accessibility</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── User Dropdown Toggle ──────────────────────────────────────────
+    const userMenu = document.getElementById('user-menu');
+    const btnAccount = document.getElementById('btn-account');
+    const userDropdown = document.getElementById('user-dropdown');
+
+    btnAccount.addEventListener('click', function(e) {
+      e.stopPropagation();
+      const expanded = btnAccount.getAttribute('aria-expanded') === 'true';
+      btnAccount.setAttribute('aria-expanded', String(!expanded));
+      userDropdown.classList.toggle('active');
+    });
+
+    document.addEventListener('click', function() {
+      btnAccount.setAttribute('aria-expanded', 'false');
+      userDropdown.classList.remove('active');
+    });
+
+    // ── Header scroll effect ──────────────────────────────────────────
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', function() {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    });
+
+    // ── Newsletter Form ───────────────────────────────────────────────
+    const newsletterForm = document.getElementById('newsletter-form');
+    const newsletterSuccess = document.getElementById('newsletter-success');
+    newsletterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const emailInput = document.getElementById('newsletter-email');
+      if (emailInput.value && emailInput.validity.valid) {
+        newsletterSuccess.style.display = 'block';
+        emailInput.value = '';
+      }
+    });
+
+    // ── Mega Menu hover handled by CSS ────────────────────────────────
+    // (see CSS :hover rules on .category-item.has-mega)
+  </script>
+</body>
+</html>

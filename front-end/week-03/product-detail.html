@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ShopVerse – Product details. Read reviews, choose options, and add to cart with confidence." />
+  <title>ShopVerse | Product Details</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="site-header">
+    <div class="announcement-bar">
+      <div class="container">
+        <span>🔥 Free shipping on orders over $50! <a href="../week-02/products.html" class="ann-link">Shop Now →</a></span>
+        <div class="ann-right">
+          <a href="#" id="btn-language">🌐 EN</a><span>|</span>
+          <a href="#" id="btn-currency">$ USD</a><span>|</span>
+          <a href="#" id="btn-track">Track Order</a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav" id="main-nav">
+      <div class="container nav-inner">
+        <a href="../week-02/index.html" class="logo" id="logo">
+          <span class="logo-icon"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="url(#lg3)"/><path d="M8 10h16M8 10l2 12h12l2-12M8 10l-2-3h18l-2 3" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="lg3" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#6C63FF"/><stop offset="100%" stop-color="#FF6584"/></linearGradient></defs></svg></span>
+          <span class="logo-text">Shop<span class="logo-accent">Verse</span></span>
+        </a>
+
+        <!-- Live Search Bar with suggestions -->
+        <div class="search-wrapper" role="search">
+          <div class="search-bar" id="search-bar">
+            <select class="search-category" id="search-category" aria-label="Search category">
+              <option>All</option><option>Electronics</option><option>Fashion</option><option>Home</option><option>Sports</option><option>Beauty</option>
+            </select>
+            <div class="search-divider"></div>
+            <input type="search" class="search-input" id="search-input" placeholder="Search products..." aria-label="Search" autocomplete="off" />
+            <button class="search-btn" id="search-btn" aria-label="Search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </button>
+          </div>
+          <!-- Search suggestions dropdown -->
+          <div class="search-suggestions" id="search-suggestions" role="listbox" aria-label="Search suggestions"></div>
+        </div>
+
+        <div class="nav-actions">
+          <a href="#" class="nav-action-btn" id="btn-wishlist" aria-label="Wishlist">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span>Wishlist</span><span class="badge" id="wishlist-badge">3</span>
+          </a>
+          <a href="#" class="nav-action-btn" id="btn-cart" aria-label="Cart">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            <span>Cart</span><span class="badge cart-badge" id="cart-badge">0</span>
+          </a>
+          <div class="user-menu" id="user-menu">
+            <button class="nav-action-btn user-btn" id="btn-account" aria-expanded="false">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>Account</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="user-dropdown" id="user-dropdown">
+              <div class="dropdown-header"><div class="avatar">JD</div><div><p class="dropdown-name">John Doe</p><p class="dropdown-email">john@example.com</p></div></div>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item" id="menu-profile">👤 My Profile</a>
+              <a href="#" class="dropdown-item" id="menu-orders">📦 My Orders</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item logout" id="menu-logout">🚪 Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="secondary-nav">
+        <div class="container secondary-nav-inner">
+          <div class="all-cat-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>All Categories</div>
+          <nav class="cat-links">
+            <a href="../week-02/index.html" id="nav-home-link">Home</a>
+            <a href="../week-02/products.html" id="nav-all">All Products</a>
+            <a href="../week-02/products.html?cat=electronics" id="nav-electronics">Electronics</a>
+            <a href="../week-02/products.html?cat=fashion" id="nav-fashion">Fashion</a>
+            <a href="../week-02/products.html?cat=home" id="nav-home">Home &amp; Living</a>
+            <a href="../week-02/products.html?cat=sports" id="nav-sports">Sports</a>
+            <a href="../week-02/products.html" class="deal-link" id="nav-deals">🔥 Flash Deals</a>
+          </nav>
+          <span class="ship-badge">🚚 Free Shipping over $50</span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+      <div class="container breadcrumb-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb" id="breadcrumb-nav">
+          <a href="../week-02/index.html" id="bc-home">Home</a>
+          <span class="bc-sep">›</span>
+          <a href="../week-02/products.html" id="bc-products">Products</a>
+          <span class="bc-sep">›</span>
+          <span class="bc-current" id="bc-product-name">Product</span>
+        </nav>
+        <div class="breadcrumb-share">
+          <button class="share-btn" id="share-btn" aria-label="Share product">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            Share
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== PRODUCT DETAIL ===================== -->
+    <section class="product-detail-section" id="product-detail-section">
+      <div class="container product-detail-layout">
+
+        <!-- Gallery Column -->
+        <div class="gallery-col" id="gallery-col">
+          <div class="main-image-wrap" id="main-image-wrap">
+            <div class="main-image" id="main-image">
+              <span id="main-img-icon" style="font-size:8rem;opacity:0.75" role="img" aria-label="Product image">💻</span>
+              <div class="image-zoom-badge">🔍 Hover to Zoom</div>
+            </div>
+            <button class="img-nav prev-img" id="prev-img" aria-label="Previous image">‹</button>
+            <button class="img-nav next-img" id="next-img" aria-label="Next image">›</button>
+          </div>
+          <div class="thumbnails" id="thumbnails" role="list" aria-label="Product images">
+            <!-- Generated by JS -->
+          </div>
+        </div>
+
+        <!-- Details Column -->
+        <div class="details-col" id="details-col">
+          <!-- Top badges -->
+          <div class="detail-top-badges" id="detail-top-badges">
+            <span class="product-badge-tag" id="product-badge-display">NEW</span>
+            <span class="in-stock-indicator" id="stock-indicator">✓ In Stock</span>
+          </div>
+
+          <!-- Product name -->
+          <h1 class="product-title" id="product-title">MacBook Pro M3 16"</h1>
+
+          <!-- Rating summary -->
+          <div class="product-rating-row" id="product-rating-row">
+            <div class="rating-stars-big" id="rating-stars-big" aria-label="Rating">★★★★★</div>
+            <a href="#reviews" class="rating-link" id="rating-count">4.9 · 2,410 reviews</a>
+            <span class="rating-sep">|</span>
+            <span class="sold-count" id="sold-count">2,847 sold</span>
+          </div>
+
+          <!-- Price block -->
+          <div class="price-block" id="price-block">
+            <span class="detail-price" id="detail-price">$1,299</span>
+            <span class="detail-old-price" id="detail-old-price">$1,799</span>
+            <span class="detail-discount-badge" id="detail-discount">Save 28%</span>
+          </div>
+
+          <!-- Short description -->
+          <p class="product-short-desc" id="product-short-desc">
+            The most powerful MacBook Pro ever. Apple M3 chip delivers breakthrough performance with a stunning Liquid Retina XDR display, up to 22 hours battery life, and pro-level connectivity.
+          </p>
+
+          <!-- Key features -->
+          <ul class="key-features" id="key-features">
+            <li>🔥 Apple M3 chip with 10-core CPU</li>
+            <li>🖥️ 16-inch Liquid Retina XDR display</li>
+            <li>🔋 Up to 22 hours battery life</li>
+            <li>⚡ Thunderbolt 4 × 3, HDMI, SD card</li>
+          </ul>
+
+          <div class="option-divider"></div>
+
+          <!-- Color Selector -->
+          <div class="option-group" id="option-color">
+            <label class="option-label">Color: <span class="selected-option" id="selected-color">Space Black</span></label>
+            <div class="color-options" id="color-options" role="radiogroup" aria-label="Select color">
+              <button class="color-swatch active" id="color-space-black" data-color="Space Black" style="background:#1a1a1a;" aria-label="Space Black" title="Space Black"></button>
+              <button class="color-swatch" id="color-silver" data-color="Silver" style="background:#c8c8c8;" aria-label="Silver" title="Silver"></button>
+              <button class="color-swatch" id="color-gold" data-color="Gold" style="background:#c8a96e;" aria-label="Gold" title="Gold"></button>
+            </div>
+          </div>
+
+          <!-- Size / Storage Selector -->
+          <div class="option-group" id="option-storage">
+            <label class="option-label" for="storage-select">Storage: <span class="selected-option" id="selected-storage">512GB SSD</span></label>
+            <div class="size-options" id="size-options" role="radiogroup" aria-label="Select storage">
+              <button class="size-btn" id="storage-256" data-size="256GB SSD" data-price-add="0">256GB</button>
+              <button class="size-btn active" id="storage-512" data-size="512GB SSD" data-price-add="0">512GB</button>
+              <button class="size-btn" id="storage-1tb" data-size="1TB SSD" data-price-add="200">1TB <span class="size-price-hint">+$200</span></button>
+              <button class="size-btn" id="storage-2tb" data-size="2TB SSD" data-price-add="400">2TB <span class="size-price-hint">+$400</span></button>
+            </div>
+          </div>
+
+          <!-- RAM Selector -->
+          <div class="option-group" id="option-ram">
+            <label class="option-label">RAM: <span class="selected-option" id="selected-ram">16GB</span></label>
+            <div class="size-options" id="ram-options" role="radiogroup" aria-label="Select RAM">
+              <button class="size-btn" id="ram-8" data-ram="8GB" data-ram-price="0">8GB</button>
+              <button class="size-btn active" id="ram-16" data-ram="16GB" data-ram-price="0">16GB</button>
+              <button class="size-btn" id="ram-32" data-ram="32GB" data-ram-price="200">32GB <span class="size-price-hint">+$200</span></button>
+              <button class="size-btn" id="ram-48" data-ram="48GB" data-ram-price="400">48GB <span class="size-price-hint">+$400</span></button>
+            </div>
+          </div>
+
+          <div class="option-divider"></div>
+
+          <!-- Quantity & Actions -->
+          <div class="quantity-actions" id="quantity-actions">
+            <div class="qty-control">
+              <button class="qty-btn" id="qty-minus" aria-label="Decrease quantity">−</button>
+              <span class="qty-display" id="qty-display" aria-live="polite">1</span>
+              <button class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+            </div>
+            <button class="btn-add-cart" id="btn-add-cart" aria-label="Add to cart">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+              Add to Cart — <span id="btn-price">$1,299</span>
+            </button>
+            <button class="btn-wishlist-big" id="btn-wishlist-big" aria-label="Add to wishlist" title="Add to wishlist">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+          </div>
+
+          <!-- Buy Now -->
+          <button class="btn-buy-now" id="btn-buy-now">
+            ⚡ Buy Now
+          </button>
+
+          <!-- Delivery info -->
+          <div class="delivery-info" id="delivery-info">
+            <div class="delivery-item">
+              <span>🚚</span>
+              <span>Free delivery by <strong>Tomorrow, Jun 12</strong></span>
+            </div>
+            <div class="delivery-item">
+              <span>🔄</span>
+              <span>30-day free returns</span>
+            </div>
+            <div class="delivery-item">
+              <span>🔒</span>
+              <span>Secure payment · SSL encrypted</span>
+            </div>
+            <div class="delivery-item">
+              <span>✅</span>
+              <span>Genuine product · 1 year warranty</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PRODUCT TABS ===================== -->
+    <section class="product-tabs-section" id="product-tabs-section">
+      <div class="container">
+        <div class="product-tabs" id="product-tabs" role="tablist">
+          <button class="product-tab active" id="ptab-desc" role="tab" data-tab="description">Description</button>
+          <button class="product-tab" id="ptab-specs" role="tab" data-tab="specs">Specifications</button>
+          <button class="product-tab" id="ptab-reviews" role="tab" data-tab="reviews">Reviews <span class="tab-count">2,410</span></button>
+          <button class="product-tab" id="ptab-shipping" role="tab" data-tab="shipping">Shipping &amp; Returns</button>
+        </div>
+
+        <!-- Description panel -->
+        <div class="tab-panel active" id="panel-description" role="tabpanel">
+          <div class="description-content">
+            <h2>About This Product</h2>
+            <p>The MacBook Pro 16-inch with Apple M3 chip is the most powerful and capable Mac laptop ever. Featuring the next-generation M3 chip, it delivers extraordinary performance and battery life, making it an exceptional workhorse for professionals.</p>
+            <p>With its stunning 16-inch Liquid Retina XDR display, the MacBook Pro offers over one billion colors with extreme dynamic range, true-to-life colors, and ProMotion adaptive refresh rates up to 120Hz for incredibly smooth scrolling and animation.</p>
+            <div class="feature-grid">
+              <div class="feature-item">
+                <span class="feature-icon">⚡</span>
+                <h4>Exceptional Performance</h4>
+                <p>The M3 chip delivers up to 60% faster performance than M1, enabling you to power through complex video projects, 3D rendering, and scientific simulations.</p>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🔋</span>
+                <h4>All-Day Battery</h4>
+                <p>Get up to 22 hours of battery life — more than any other Mac ever. When you need to charge, MagSafe charges the battery up to 50% in around 30 minutes.</p>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🖥️</span>
+                <h4>Stunning Display</h4>
+                <p>The Liquid Retina XDR display with ProMotion features up to 1000 nits sustained brightness, 1600 nits peak brightness, and support for P3 wide colour.</p>
+              </div>
+              <div class="feature-item">
+                <span class="feature-icon">🔌</span>
+                <h4>Pro Connectivity</h4>
+                <p>Three Thunderbolt 4 ports, HDMI 2.1, an SD card slot, MagSafe 3, and a headphone jack with support for high-impedance headphones.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specs panel -->
+        <div class="tab-panel" id="panel-specs" role="tabpanel">
+          <div class="specs-table">
+            <div class="specs-group">
+              <h3>Processor &amp; Memory</h3>
+              <div class="specs-row"><span class="spec-name">Chip</span><span class="spec-value">Apple M3 (10-core CPU, 16-core GPU)</span></div>
+              <div class="specs-row"><span class="spec-name">RAM</span><span class="spec-value">16GB / 32GB / 48GB unified memory</span></div>
+              <div class="specs-row"><span class="spec-name">Storage</span><span class="spec-value">256GB / 512GB / 1TB / 2TB SSD</span></div>
+              <div class="specs-row"><span class="spec-name">Neural Engine</span><span class="spec-value">16-core Neural Engine</span></div>
+            </div>
+            <div class="specs-group">
+              <h3>Display</h3>
+              <div class="specs-row"><span class="spec-name">Size</span><span class="spec-value">16.2-inch Liquid Retina XDR</span></div>
+              <div class="specs-row"><span class="spec-name">Resolution</span><span class="spec-value">3456 × 2234 at 254 ppi</span></div>
+              <div class="specs-row"><span class="spec-name">Refresh Rate</span><span class="spec-value">ProMotion 24–120Hz adaptive</span></div>
+              <div class="specs-row"><span class="spec-name">Brightness</span><span class="spec-value">1000 nits sustained, 1600 nits peak</span></div>
+            </div>
+            <div class="specs-group">
+              <h3>Battery &amp; Charging</h3>
+              <div class="specs-row"><span class="spec-name">Battery Life</span><span class="spec-value">Up to 22 hours</span></div>
+              <div class="specs-row"><span class="spec-name">Capacity</span><span class="spec-value">100Wh lithium-polymer</span></div>
+              <div class="specs-row"><span class="spec-name">Charging</span><span class="spec-value">140W USB-C, MagSafe 3</span></div>
+            </div>
+            <div class="specs-group">
+              <h3>Connectivity</h3>
+              <div class="specs-row"><span class="spec-name">Ports</span><span class="spec-value">3× Thunderbolt 4, HDMI 2.1, SD Card, MagSafe 3, 3.5mm</span></div>
+              <div class="specs-row"><span class="spec-name">Wi-Fi</span><span class="spec-value">Wi-Fi 6E (802.11ax)</span></div>
+              <div class="specs-row"><span class="spec-name">Bluetooth</span><span class="spec-value">Bluetooth 5.3</span></div>
+              <div class="specs-row"><span class="spec-name">Webcam</span><span class="spec-value">12MP Center Stage camera</span></div>
+            </div>
+            <div class="specs-group">
+              <h3>Dimensions &amp; Weight</h3>
+              <div class="specs-row"><span class="spec-name">Weight</span><span class="spec-value">2.15 kg (4.74 lb)</span></div>
+              <div class="specs-row"><span class="spec-name">Dimensions</span><span class="spec-value">35.57 × 24.81 × 1.68 cm</span></div>
+              <div class="specs-row"><span class="spec-name">Color Options</span><span class="spec-value">Space Black, Silver, Gold</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reviews panel -->
+        <div class="tab-panel" id="panel-reviews" role="tabpanel">
+          <div id="reviews" class="reviews-section">
+            <div class="reviews-overview">
+              <div class="reviews-score">
+                <span class="big-score">4.9</span>
+                <div class="big-stars">★★★★★</div>
+                <span class="total-reviews">2,410 reviews</span>
+              </div>
+              <div class="rating-bars">
+                <div class="rating-bar-row"><span>5★</span><div class="bar-wrap"><div class="bar-fill" style="width:82%"></div></div><span>82%</span></div>
+                <div class="rating-bar-row"><span>4★</span><div class="bar-wrap"><div class="bar-fill" style="width:12%"></div></div><span>12%</span></div>
+                <div class="rating-bar-row"><span>3★</span><div class="bar-wrap"><div class="bar-fill" style="width:4%"></div></div><span>4%</span></div>
+                <div class="rating-bar-row"><span>2★</span><div class="bar-wrap"><div class="bar-fill" style="width:1%"></div></div><span>1%</span></div>
+                <div class="rating-bar-row"><span>1★</span><div class="bar-wrap"><div class="bar-fill" style="width:1%"></div></div><span>1%</span></div>
+              </div>
+            </div>
+            <div class="review-filter-bar">
+              <span class="rev-filter-label">Filter:</span>
+              <button class="rev-filter-btn active" id="rev-all" data-filter="all">All</button>
+              <button class="rev-filter-btn" id="rev-5" data-filter="5">5★</button>
+              <button class="rev-filter-btn" id="rev-4" data-filter="4">4★</button>
+              <button class="rev-filter-btn" id="rev-positive" data-filter="positive">Positive</button>
+              <button class="rev-filter-btn" id="rev-critical" data-filter="critical">Critical</button>
+            </div>
+            <div class="reviews-list" id="reviews-list">
+              <!-- Generated by JS -->
+            </div>
+            <!-- Write review -->
+            <div class="write-review" id="write-review">
+              <h3 class="write-review-title">Write a Review</h3>
+              <form class="review-form" id="review-form" novalidate>
+                <div class="form-row-two">
+                  <div class="form-field">
+                    <label for="rev-name" class="form-label">Name</label>
+                    <input type="text" class="form-input" id="rev-name" placeholder="Your name" required />
+                  </div>
+                  <div class="form-field">
+                    <label for="rev-email-input" class="form-label">Email</label>
+                    <input type="email" class="form-input" id="rev-email-input" placeholder="your@email.com" required />
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label class="form-label">Rating</label>
+                  <div class="star-rating-input" id="star-rating-input" role="radiogroup" aria-label="Rating">
+                    <button type="button" class="star-input" id="star-1" data-val="1" aria-label="1 star">★</button>
+                    <button type="button" class="star-input" id="star-2" data-val="2" aria-label="2 stars">★</button>
+                    <button type="button" class="star-input" id="star-3" data-val="3" aria-label="3 stars">★</button>
+                    <button type="button" class="star-input" id="star-4" data-val="4" aria-label="4 stars">★</button>
+                    <button type="button" class="star-input" id="star-5" data-val="5" aria-label="5 stars">★</button>
+                  </div>
+                  <span class="rating-input-label" id="rating-input-label">Click to rate</span>
+                </div>
+                <div class="form-field">
+                  <label for="rev-title" class="form-label">Review Title</label>
+                  <input type="text" class="form-input" id="rev-title" placeholder="Summarize your review" />
+                </div>
+                <div class="form-field">
+                  <label for="rev-body" class="form-label">Review</label>
+                  <textarea class="form-textarea" id="rev-body" rows="5" placeholder="Share your experience with this product..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit-review" id="btn-submit-review">Submit Review</button>
+                <p class="review-success" id="review-success" style="display:none">✅ Thank you! Your review has been submitted for moderation.</p>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Shipping panel -->
+        <div class="tab-panel" id="panel-shipping" role="tabpanel">
+          <div class="shipping-info">
+            <div class="ship-grid">
+              <div class="ship-card" id="ship-standard">
+                <span class="ship-card-icon">📦</span>
+                <h3>Standard Shipping</h3>
+                <p class="ship-price">Free on orders over $50</p>
+                <p class="ship-time">5–7 business days</p>
+              </div>
+              <div class="ship-card ship-card-fast" id="ship-express">
+                <span class="ship-card-icon">⚡</span>
+                <h3>Express Shipping</h3>
+                <p class="ship-price">$12.99</p>
+                <p class="ship-time">2–3 business days</p>
+              </div>
+              <div class="ship-card" id="ship-overnight">
+                <span class="ship-card-icon">🚀</span>
+                <h3>Overnight Delivery</h3>
+                <p class="ship-price">$24.99</p>
+                <p class="ship-time">Next business day</p>
+              </div>
+            </div>
+            <div class="returns-policy" id="returns-policy">
+              <h3>📋 Returns Policy</h3>
+              <ul>
+                <li>✅ 30-day free returns on all items</li>
+                <li>✅ Original packaging preferred but not required</li>
+                <li>✅ Refund processed within 3–5 business days</li>
+                <li>✅ Free prepaid return label included</li>
+                <li>⚠️ Custom-configured products may be subject to a restocking fee</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RELATED PRODUCTS ===================== -->
+    <section class="related-section" id="related-section">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge">You May Also Like</span>
+            <h2 class="section-title">Related Products</h2>
+          </div>
+          <a href="../week-02/products.html" class="view-all-btn" id="view-all-related">View All →</a>
+        </div>
+        <div class="related-grid" id="related-grid">
+          <!-- Generated by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RECENTLY VIEWED ===================== -->
+    <section class="recently-viewed" id="recently-viewed">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <span class="section-badge">History</span>
+            <h2 class="section-title">Recently Viewed</h2>
+          </div>
+        </div>
+        <div class="related-grid" id="recent-grid">
+          <!-- Generated by JS -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div class="footer-col footer-brand-col">
+          <a href="../week-02/index.html" class="footer-logo" id="footer-logo">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="url(#flg4)"/><path d="M8 10h16M8 10l2 12h12l2-12M8 10l-2-3h18l-2 3" stroke="var(--color-primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="flg4" x1="0" y1="0" x2="32" y2="32"><stop offset="0%" stop-color="#6C63FF"/><stop offset="100%" stop-color="#FF6584"/></linearGradient></defs></svg>
+            <span class="logo-text">Shop<span class="logo-accent">Verse</span></span>
+          </a>
+          <p class="footer-desc">Premium eCommerce for the modern shopper.</p>
+        </div>
+        <div class="footer-col"><h3 class="footer-col-title">Company</h3><ul class="footer-links"><li><a href="#" id="f-about">About Us</a></li><li><a href="#" id="f-careers">Careers</a></li><li><a href="#" id="f-blog">Blog</a></li></ul></div>
+        <div class="footer-col"><h3 class="footer-col-title">Help</h3><ul class="footer-links"><li><a href="#" id="f-faq">FAQ</a></li><li><a href="#" id="f-contact">Contact</a></li><li><a href="#" id="f-returns">Returns</a></li></ul></div>
+        <div class="footer-col"><h3 class="footer-col-title">Shop</h3><ul class="footer-links"><li><a href="../week-02/products.html" id="f-all">All Products</a></li><li><a href="../week-02/products.html" id="f-deals">Flash Deals</a></li><li><a href="../week-02/products.html" id="f-new">New Arrivals</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p class="copyright">© 2026 ShopVerse. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#" id="f-privacy">Privacy</a><span>·</span>
+            <a href="#" id="f-terms">Terms</a><span>·</span>
+            <a href="#" id="f-cookies">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Add to Cart Bar (shows on scroll) -->
+  <div class="sticky-cart-bar" id="sticky-cart-bar" aria-live="polite">
+    <div class="container sticky-cart-inner">
+      <span class="sticky-product-name" id="sticky-product-name">MacBook Pro M3 16"</span>
+      <span class="sticky-price" id="sticky-price">$1,299</span>
+      <button class="sticky-add-btn" id="sticky-add-btn">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="cart-toast" role="alert" aria-live="polite">
+    <span class="toast-icon">🛒</span>
+    <span class="toast-msg" id="toast-msg">Item added to cart!</span>
+  </div>
+
+  <script src="js/product-detail.js"></script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ShopVerse – Browse all products. Filter by category, price, and rating to find the best deals." />
+  <title>ShopVerse | All Products – Shop Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- HEADER (same as index.html) -->
+  <header class="site-header" id="site-header">
+    <div class="announcement-bar">
+      <div class="container">
+        <span>🔥 Summer Sale – Up to <strong>70% OFF</strong>! <a href="#" class="ann-link">Shop Now →</a></span>
+        <div class="ann-right">
+          <a href="#" id="btn-language">🌐 EN</a><span>|</span>
+          <a href="#" id="btn-currency">$ USD</a><span>|</span>
+          <a href="#" id="btn-track">Track Order</a>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav" id="main-nav">
+      <div class="container nav-inner">
+        <a href="index.html" class="logo" id="logo">
+          <img src="../assets/assets/Layout/Brand/logo-colored.png" alt="Brand Logo" style="height: 32px;" />
+        </a>
+        <div class="search-wrapper" role="search">
+          <div class="search-bar" id="search-bar">
+            <select class="search-category" id="search-category" aria-label="Category">
+              <option>All</option><option>Electronics</option><option>Fashion</option><option>Home</option><option>Sports</option><option>Beauty</option>
+            </select>
+            <div class="search-divider"></div>
+            <input type="search" class="search-input" id="search-input" placeholder="Search products, brands..." aria-label="Search" />
+            <button class="search-btn" id="search-btn" aria-label="Search">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <a href="#" class="nav-action-btn" id="btn-wishlist"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span>Wishlist</span><span class="badge" id="wishlist-badge">3</span></a>
+          <a href="#" class="nav-action-btn" id="btn-cart"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span>Cart</span><span class="badge cart-badge" id="cart-badge">0</span></a>
+          <div class="user-menu" id="user-menu">
+            <button class="nav-action-btn user-btn" id="btn-account" aria-expanded="false">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Account</span>
+              <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="user-dropdown" id="user-dropdown">
+              <div class="dropdown-header"><div class="avatar">JD</div><div><p class="dropdown-name">John Doe</p><p class="dropdown-email">john@example.com</p></div></div>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item" id="menu-profile">👤 My Profile</a>
+              <a href="#" class="dropdown-item" id="menu-orders">📦 My Orders</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item logout" id="menu-logout">🚪 Sign Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="secondary-nav">
+        <div class="container secondary-nav-inner">
+          <div class="all-cat-btn" id="all-cat-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>All Categories</div>
+          <nav class="cat-links">
+            <a href="index.html" id="nav-home-link">Home</a>
+            <a href="#" id="nav-electronics">Electronics</a>
+            <a href="#" id="nav-fashion">Fashion</a>
+            <a href="#" id="nav-home">Home &amp; Living</a>
+            <a href="#" id="nav-sports">Sports</a>
+            <a href="#" id="nav-beauty">Beauty</a>
+            <a href="#" class="deal-link" id="nav-deals">🔥 Flash Deals</a>
+          </nav>
+          <span class="ship-badge">🚚 Free Shipping over $50</span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-bar">
+      <div class="container breadcrumb-inner">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html" id="bc-home">Home</a>
+          <span class="bc-sep">›</span>
+          <span class="bc-current" id="bc-current">All Products</span>
+        </nav>
+        <p class="results-count" id="results-count">Showing <strong id="product-count">0</strong> products</p>
+      </div>
+    </div>
+
+    <div class="container products-layout" id="products-layout">
+
+      <!-- ===================== SIDEBAR FILTERS ===================== -->
+      <aside class="filters-sidebar" id="filters-sidebar" aria-label="Product filters">
+        <div class="filters-header">
+          <h2 class="filters-title">Filters</h2>
+          <button class="clear-filters-btn" id="clear-filters-btn">Clear All</button>
+        </div>
+
+        <!-- Category Filter -->
+        <div class="filter-group" id="filter-categories">
+          <h3 class="filter-group-title">
+            Category
+            <svg class="filter-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </h3>
+          <div class="filter-options">
+            <label class="filter-option" id="fcat-all"><input type="radio" name="category" value="all" checked /> All Categories <span class="filter-count">50,000</span></label>
+            <label class="filter-option" id="fcat-electronics"><input type="radio" name="category" value="electronics" /> Electronics <span class="filter-count">12,430</span></label>
+            <label class="filter-option" id="fcat-fashion"><input type="radio" name="category" value="fashion" /> Fashion <span class="filter-count">24,100</span></label>
+            <label class="filter-option" id="fcat-home"><input type="radio" name="category" value="home" /> Home &amp; Living <span class="filter-count">8,760</span></label>
+            <label class="filter-option" id="fcat-sports"><input type="radio" name="category" value="sports" /> Sports <span class="filter-count">5,320</span></label>
+            <label class="filter-option" id="fcat-beauty"><input type="radio" name="category" value="beauty" /> Beauty <span class="filter-count">3,890</span></label>
+          </div>
+        </div>
+
+        <!-- Price Filter -->
+        <div class="filter-group" id="filter-price">
+          <h3 class="filter-group-title">
+            Price Range
+            <svg class="filter-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </h3>
+          <div class="filter-options">
+            <div class="price-display">
+              <span id="price-min-display">$0</span>
+              <span>–</span>
+              <span id="price-max-display">$2000</span>
+            </div>
+            <input type="range" class="price-slider" id="price-slider" min="0" max="2000" value="2000" step="50" aria-label="Maximum price" />
+            <div class="price-presets">
+              <button class="price-preset" id="pp-under50" data-max="50">Under $50</button>
+              <button class="price-preset" id="pp-50-200" data-min="50" data-max="200">$50–$200</button>
+              <button class="price-preset" id="pp-200-500" data-min="200" data-max="500">$200–$500</button>
+              <button class="price-preset" id="pp-over500" data-min="500">$500+</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rating Filter -->
+        <div class="filter-group" id="filter-rating">
+          <h3 class="filter-group-title">
+            Customer Rating
+            <svg class="filter-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </h3>
+          <div class="filter-options">
+            <label class="filter-option star-opt" id="frat-4"><input type="radio" name="rating" value="4" /> <span class="mini-stars">★★★★</span> &amp; above</label>
+            <label class="filter-option star-opt" id="frat-3"><input type="radio" name="rating" value="3" /> <span class="mini-stars">★★★</span> &amp; above</label>
+            <label class="filter-option star-opt" id="frat-any"><input type="radio" name="rating" value="0" checked /> Any Rating</label>
+          </div>
+        </div>
+
+        <!-- Availability -->
+        <div class="filter-group" id="filter-availability">
+          <h3 class="filter-group-title">
+            Availability
+            <svg class="filter-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </h3>
+          <div class="filter-options">
+            <label class="filter-option" id="favail-instock"><input type="checkbox" value="instock" id="chk-instock" /> In Stock Only</label>
+            <label class="filter-option" id="favail-sale"><input type="checkbox" value="sale" id="chk-sale" /> On Sale</label>
+            <label class="filter-option" id="favail-free-ship"><input type="checkbox" value="freeship" id="chk-freeship" /> Free Shipping</label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ===================== PRODUCTS AREA ===================== -->
+      <div class="products-area" id="products-area">
+        <!-- Sort & View Controls -->
+        <div class="products-controls" id="products-controls">
+          <div class="active-filters" id="active-filters"></div>
+          <div class="controls-right">
+            <div class="sort-wrap">
+              <label for="sort-select" class="sort-label">Sort by:</label>
+              <select class="sort-select" id="sort-select" aria-label="Sort products">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Best Rating</option>
+                <option value="newest">Newest First</option>
+              </select>
+            </div>
+            <div class="view-toggle" role="group" aria-label="View style">
+              <button class="view-btn active" id="view-grid" aria-label="Grid view" title="Grid View">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              </button>
+              <button class="view-btn" id="view-list" aria-label="List view" title="List View">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><circle cx="3" cy="6" r="1" fill="currentColor"/><circle cx="3" cy="12" r="1" fill="currentColor"/><circle cx="3" cy="18" r="1" fill="currentColor"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div class="products-grid" id="products-grid"></div>
+
+        <!-- Pagination -->
+        <nav class="pagination" id="pagination" aria-label="Product pagination">
+          <button class="page-btn prev-btn" id="prev-page" aria-label="Previous page" disabled>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="page-numbers" id="page-numbers"></div>
+          <button class="page-btn next-btn" id="next-page" aria-label="Next page">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-main">
+      <div class="container footer-grid">
+        <div class="footer-col footer-brand-col">
+          <a href="index.html" class="footer-logo" id="footer-logo">
+            <img src="../assets/assets/Layout/Brand/logo-colored.png" alt="Brand Logo" style="height: 28px;" />
+          </a>
+          <p class="footer-desc">Premium eCommerce for the modern shopper.</p>
+        </div>
+        <div class="footer-col"><h3 class="footer-col-title">Company</h3><ul class="footer-links"><li><a href="#" id="f-about">About Us</a></li><li><a href="#" id="f-careers">Careers</a></li><li><a href="#" id="f-blog">Blog</a></li></ul></div>
+        <div class="footer-col"><h3 class="footer-col-title">Help</h3><ul class="footer-links"><li><a href="#" id="f-faq">FAQ</a></li><li><a href="#" id="f-contact">Contact</a></li><li><a href="#" id="f-returns">Returns</a></li></ul></div>
+        <div class="footer-col"><h3 class="footer-col-title">Shop</h3><ul class="footer-links"><li><a href="#" id="f-new">New Arrivals</a></li><li><a href="#" id="f-deals">Flash Deals</a></li><li><a href="#" id="f-bestsellers">Best Sellers</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <p class="copyright">© 2026 ShopVerse. All rights reserved.</p>
+          <div class="footer-legal">
+            <a href="#" id="f-privacy">Privacy</a><span>·</span>
+            <a href="#" id="f-terms">Terms</a><span>·</span>
+            <a href="#" id="f-cookies">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="cart-toast" role="alert" aria-live="polite">
+    <span class="toast-icon">🛒</span>
+    <span class="toast-msg" id="toast-msg">Item added to cart!</span>
+  </div>
+
+  <script src="js/products.js"></script>
+</body>
+</html>
